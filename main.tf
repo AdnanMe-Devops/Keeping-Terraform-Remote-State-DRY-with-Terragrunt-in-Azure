@@ -29,3 +29,5 @@ resource "azurerm_subnet" "subnet1" {
   address_prefixes     = ["10.0.0.0/24"]
 }
 
+-----Each main.tf file in the child folders contains an empty azurerm backend block:
+This makes the remote state configuration much easier to maintain since all the configuration settings are maintained in a single file at the root of the directory.
